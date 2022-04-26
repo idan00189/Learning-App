@@ -20,6 +20,7 @@
 		3EEFA92A2817F8080000DA8E /* LessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFA9292817F8080000DA8E /* LessonListView.swift */; };
 		3EEFA92E281806740000DA8E /* LessonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFA92D281806740000DA8E /* LessonContentView.swift */; };
 		3EEFA931281808400000DA8E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EEFA930281808400000DA8E /* AVKit.framework */; };
+		3EEFA9332818232F0000DA8E /* LessonTextCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFA9322818232F0000DA8E /* LessonTextCodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3EEFA9292817F8080000DA8E /* LessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListView.swift; sourceTree = "<group>"; };
 		3EEFA92D281806740000DA8E /* LessonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContentView.swift; sourceTree = "<group>"; };
 		3EEFA930281808400000DA8E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		3EEFA9322818232F0000DA8E /* LessonTextCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTextCodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				3EC614AB2817382A0029CE30 /* Preview.swift */,
 				3EEFA9292817F8080000DA8E /* LessonListView.swift */,
 				3EEFA92D281806740000DA8E /* LessonContentView.swift */,
+				3EEFA9322818232F0000DA8E /* LessonTextCodeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				3EC614AA28172E900029CE30 /* Services.swift in Sources */,
 				3EC614A728172D950029CE30 /* TopicModel.swift in Sources */,
 				3E17427728171CD900C8FA2C /* ContentView.swift in Sources */,
+				3EEFA9332818232F0000DA8E /* LessonTextCodeView.swift in Sources */,
 				3EC614A4281729110029CE30 /* models.swift in Sources */,
 				3EEFA92E281806740000DA8E /* LessonContentView.swift in Sources */,
 				3EC614AC2817382A0029CE30 /* Preview.swift in Sources */,

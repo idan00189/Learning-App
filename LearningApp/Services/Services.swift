@@ -38,6 +38,30 @@ struct Services {
         return [Topic]()
     }
     
+    static func getRemoteData() -> [Topic] {
+        
+        let url = URL(string: "https://codewithchris.github.io/learningapp-data/data2.json")
+        
+        if url != nil {
+            do{
+                let data = try Data(contentsOf: url!)
+                
+                let decoder = JSONDecoder()
+                if let topics = try? decoder.decode([Topic].self, from: data){
+                    return topics
+                }
+            }
+            catch{
+                print("couldent create data")
+            }
+        
+        }
+        
+        
+        return [Topic]()
+        
+    }
+    
     
     
 }

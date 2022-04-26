@@ -24,15 +24,14 @@ struct LessonContentView: View {
                     .padding()
             }
             
-            ScrollView{
-                VStack{
-                Text("TODO")
-                }.padding(.leading)
-            }
+            LessonTextCodeView(nsss: model.AddStyling(model.topics[topicid].content.lessons[lessonid].explanation))
             
             Button {
                 if lessonid + 1 < model.topics[topicid].content.lessons.count {
                     lessonid += 1
+                }
+                else{
+                    model.navigationid = nil
                 }
             } label: {
                 ZStack{
@@ -57,9 +56,9 @@ struct LessonContentView: View {
                 
 
             
-        }.navigationBarTitle(model.topics[topicid].content.lessons[lessonid].title)
+        
             
-    }
+    }.navigationBarTitle(model.topics[topicid].content.lessons[lessonid].title)
 }
 
 struct LessonContentView_Previews: PreviewProvider {
@@ -67,4 +66,5 @@ struct LessonContentView_Previews: PreviewProvider {
         LessonContentView(topicid: 0 , lessonid: 0)
             .environmentObject(TopicModel())
     }
+}
 }
