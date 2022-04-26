@@ -12,15 +12,16 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView{
-            
-            
+            VStack(alignment: .leading){
+                Text("What would you like to learn today?")
+                    .padding(.leading)
             ScrollView{
                 LazyVStack(spacing : 15){
                     
                     ForEach(model.topics){ topic in
                     
                     NavigationLink {
-                        
+                        LessonListView(topicid: topic.id)
                     } label: {
                         Preview(image: topic.content.image, category: "learn \(topic.category)", description: topic.content.description, leassonORtests:"\(String( topic.content.lessons.count)) lessons", time: topic.content.time)
                         
@@ -41,12 +42,15 @@ struct ContentView: View {
                 
                 
             }.foregroundColor(.black)
-                .navigationTitle("Get Started")
+                    
+                
+            }.navigationTitle("Get Started")
+                
                 
                 
             
             
-        }.navigationTitle("Get Started")
+        }.navigationViewStyle(.stack)
             
         
         
