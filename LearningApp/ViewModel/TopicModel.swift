@@ -9,6 +9,7 @@ import Foundation
 class TopicModel : ObservableObject {
     
     @Published var topics : [Topic]
+    @Published var navigationid = 0
     
     
     init() {

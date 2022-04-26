@@ -9,6 +9,7 @@ import Foundation
 
 struct Services {
     
+    static var videoHostUrl = "https://codewithchris.github.io/learningJSON/"
     
     static func getLocalData() -> [Topic] {
         
