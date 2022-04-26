@@ -15,19 +15,23 @@ struct ContentView: View {
             
             
             ScrollView{
-                LazyVStack{
+                LazyVStack(spacing : 15){
+                    
                     ForEach(model.topics){ topic in
                     
                     NavigationLink {
                         
                     } label: {
-                        Preview(image: topic.content.image, category: topic.category, description: topic.content.description, leassonORtests: topic.content.lessons.count, time: topic.content.time)
+                        Preview(image: topic.content.image, category: "learn \(topic.category)", description: topic.content.description, leassonORtests:"\(String( topic.content.lessons.count)) lessons", time: topic.content.time)
+                        
+                            
                     }
                   
                         NavigationLink {
                             
                         } label: {
-                            Preview(image: topic.test.image, category: topic.category, description: topic.test.description, leassonORtests: topic.test.questions.count, time: topic.test.time)
+                            Preview(image: topic.test.image, category: "\(topic.category) Test", description: topic.test.description, leassonORtests: "\(String( topic.test.questions.count)) question", time: topic.test.time)
+                                
                         }
                 }
                     
@@ -37,9 +41,13 @@ struct ContentView: View {
                 
                 
             }.foregroundColor(.black)
+                .navigationTitle("Get Started")
+                
+                
             
             
         }.navigationTitle("Get Started")
+            
         
         
         

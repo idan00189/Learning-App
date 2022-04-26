@@ -11,7 +11,7 @@ struct Preview: View {
     var image : String
     var category : String
     var description : String
-    var leassonORtests : Int
+    var leassonORtests : String
     var time : String
     var body: some View {
         
@@ -19,27 +19,29 @@ struct Preview: View {
             
             Rectangle()
                 .foregroundColor(.white)
-                .shadow(radius: 5)
+                .shadow(color: .gray, radius: 5, x: -2, y: 2)
                 .aspectRatio(CGSize(width: 335, height: 175), contentMode: .fit)
             
-            HStack(spacing: 10.0){
+            HStack(){
                 
                 Image(image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 116, height: 116)
                     .clipShape(Circle())
+                    .padding(.leading , 10)
                     
-                VStack(alignment: .leading, spacing: 10){
+                VStack(alignment: .leading){
                     
-                    Text("Learn\(category)")
+                    Text(category)
                         .bold()
                         .font(Font.system(size: 20))
                         
                     
                     Text(description)
                         .font(.caption)
-                        .padding(.bottom , 10)
+                        .padding(.bottom, 10.0)
+                        
                         
                         
                         
@@ -47,14 +49,16 @@ struct Preview: View {
                     
                     HStack{
                         
+                        HStack(spacing: 5){
                         Image(systemName: "text.book.closed")
-                        Text("\(String(leassonORtests)) Lessons")
+                        Text(leassonORtests)
                             .font(.caption)
-                        Spacer()
+                        }
+                        HStack(spacing: 5){
                         Image(systemName: "clock")
                         Text(time)
                             .font(.caption)
-                        Spacer()
+                        }
                     }
                     
                     
@@ -62,11 +66,13 @@ struct Preview: View {
                 }.padding(.horizontal)
                 
                 
-            }.padding(.horizontal)
+                
+            }
                 
             
             
         }
+        .padding(.horizontal)
         
         
         
@@ -75,6 +81,6 @@ struct Preview: View {
 
 struct Preview_Previews: PreviewProvider {
     static var previews: some View {
-        Preview(image: "swift", category: "swift", description: "some description", leassonORtests: 10, time: "3 houers")
+        Preview(image: "swift", category: "swift", description: "some descriptionkdn fdkngkdfng dkgndkgmkdg gknf kldmfnskjfnsd osdinfgoisfgniodfjgoidf ionfdngoefo oingoif nodngjnfgn fgjnhb", leassonORtests: " 10 lessons", time: "3 houers")
     }
 }
