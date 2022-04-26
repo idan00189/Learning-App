@@ -12,6 +12,7 @@ struct LessonContentView: View {
     @EnvironmentObject var model : TopicModel
     var topicid : Int
     @State var lessonid : Int
+    @State var  bartitle : String
     var body: some View {
         VStack(alignment: .leading){
             
@@ -25,9 +26,12 @@ struct LessonContentView: View {
             }
             
             LessonTextCodeView(nsss: model.AddStyling(model.topics[topicid].content.lessons[lessonid].explanation))
+                .padding(.horizontal)
             
             Button {
-                if lessonid + 1 < model.topics[topicid].content.lessons.count {
+                if lessonid + 1 < model.topics[topicid].content.lessons.count  {
+                    
+                    self.bartitle = model.topics[topicid].content.lessons[lessonid + 1].title
                     lessonid += 1
                 }
                 else{
@@ -40,8 +44,9 @@ struct LessonContentView: View {
                     .cornerRadius(10)
                     .foregroundColor(.green)
                     .shadow(radius: 5)
+                    
                 if lessonid + 1 < model.topics[topicid].content.lessons.count {
-                    Text("Next Lesson : \(model.topics[topicid].content.lessons[lessonid+1].title)")
+                    Text("Next Lesson : \(model.topics[topicid].content.lessons[lessonid + 1].title)")
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         
@@ -54,16 +59,17 @@ struct LessonContentView: View {
                 }
             }.padding()
                 
+                
 
             
         
             
-    }.navigationBarTitle(model.topics[topicid].content.lessons[lessonid].title)
+    }.navigationBarTitle(bartitle)
 }
 
 struct LessonContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LessonContentView(topicid: 0 , lessonid: 0)
+        LessonContentView(topicid: 0 , lessonid: 0  , bartitle: "")
             .environmentObject(TopicModel())
     }
 }

@@ -18,7 +18,7 @@ struct LessonListView: View {
                 
                 ForEach(0..<model.topics[topicid].content.lessons.count){ index in
                     NavigationLink {
-                        LessonContentView(topicid: topicid, lessonid: index)
+                        LessonContentView(topicid: topicid, lessonid: index , bartitle: model.topics[topicid].content.lessons[index].title)
                     } label: {
                         ZStack{
                             Rectangle()
