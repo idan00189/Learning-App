@@ -28,7 +28,7 @@ struct ContentView: View {
                         }
                   
                         NavigationLink {
-                            
+                            TestView(topicid: topic.id)
                         } label: {
                             Preview(image: topic.test.image, category: "\(topic.category) Test", description: topic.test.description, leassonORtests: "\(String( topic.test.questions.count)) question", time: topic.test.time)
                                 
