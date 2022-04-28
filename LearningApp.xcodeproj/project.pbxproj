@@ -17,6 +17,7 @@
 		3EC614A728172D950029CE30 /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC614A628172D950029CE30 /* TopicModel.swift */; };
 		3EC614AA28172E900029CE30 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC614A928172E900029CE30 /* Services.swift */; };
 		3EC614AC2817382A0029CE30 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC614AB2817382A0029CE30 /* Preview.swift */; };
+		3ECA2F3828197E8000CB0145 /* RecCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA2F3728197E8000CB0145 /* RecCard.swift */; };
 		3EEFA92A2817F8080000DA8E /* LessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFA9292817F8080000DA8E /* LessonListView.swift */; };
 		3EEFA92E281806740000DA8E /* LessonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEFA92D281806740000DA8E /* LessonContentView.swift */; };
 		3EEFA931281808400000DA8E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EEFA930281808400000DA8E /* AVKit.framework */; };
@@ -36,6 +37,7 @@
 		3EC614A628172D950029CE30 /* TopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
 		3EC614A928172E900029CE30 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		3EC614AB2817382A0029CE30 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		3ECA2F3728197E8000CB0145 /* RecCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecCard.swift; sourceTree = "<group>"; };
 		3EEFA9292817F8080000DA8E /* LessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListView.swift; sourceTree = "<group>"; };
 		3EEFA92D281806740000DA8E /* LessonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContentView.swift; sourceTree = "<group>"; };
 		3EEFA930281808400000DA8E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -129,6 +131,7 @@
 				3EEFA92D281806740000DA8E /* LessonContentView.swift */,
 				3EEFA9322818232F0000DA8E /* LessonTextCodeView.swift */,
 				3EEFA934281845A10000DA8E /* TestView.swift */,
+				3ECA2F3728197E8000CB0145 /* RecCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				3EC614AC2817382A0029CE30 /* Preview.swift in Sources */,
 				3EEFA92A2817F8080000DA8E /* LessonListView.swift in Sources */,
 				3E17427528171CD900C8FA2C /* LearningAppApp.swift in Sources */,
+				3ECA2F3828197E8000CB0145 /* RecCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

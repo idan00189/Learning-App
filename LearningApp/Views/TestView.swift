@@ -10,8 +10,8 @@ import SwiftUI
 struct TestView: View {
     @EnvironmentObject var model : TopicModel
     var topicid : Int
-    var questionid = 0
-    @State var selectedIndex : Int?
+    @State var questionid = 0
+    @State var selectedIndex :Int?
     @State var isSubmites = false
     
     var body: some View {
@@ -26,20 +26,19 @@ struct TestView: View {
             ForEach(0..<model.topics[topicid].test.questions[questionid].answers.count){ index in
                 
                 
-                VStack(spacing: 20.0){
+                VStack(spacing: 20){
                         Button {
-                            selectedIndex = index
+                            model.testSelectedIndex = index
                         } label: {
                             ZStack{
-                            Rectangle()
-                                .frame(height: 50)
-                                .cornerRadius(10)
-                                .foregroundColor(.white)
-                                .shadow(radius: 5)
+                                RecCard(color: index == model.testSelectedIndex ? .gray : .white)
+                                    .frame( height: 40)
+                                
                                 
                                 Text(model.topics[topicid].test.questions[questionid].answers[index])
                             }
-                        }.disabled(isSubmites)
+                        }.disabled(model.testIsSubmited ?? false)
+                        
 
                         
                         
@@ -50,7 +49,7 @@ struct TestView: View {
             
             }
             Button {
-                isSubmites = true
+                model.testIsSubmited = true
             } label: {
                 ZStack{
                 Rectangle()
@@ -66,6 +65,7 @@ struct TestView: View {
                 
             }
             .padding()
+            .disabled(model.testSelectedIndex == nil)
         }
         .foregroundColor(.black)
         .navigationTitle("\(model.topics[topicid].category) Test")

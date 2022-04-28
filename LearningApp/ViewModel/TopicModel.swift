@@ -10,7 +10,8 @@ class TopicModel : ObservableObject {
     
     @Published var topics : [Topic]
     @Published var navigationid : Int?
-    
+    @Published var testSelectedIndex : Int?
+    @Published var testIsSubmited : Bool?
     
     init() {
         
